@@ -1,0 +1,117 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
+@import url('http://fonts.cdnfonts.com/css/gotham');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.3rem;
+    font-family: 'Gotham', sans-serif;  
+
+}
+
+header{
+    background-color: white;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    padding: 1.5rem 7rem;
+    border-bottom: 1px solid #eee;
+    box-shadow: 1px 1px 3px black;
+}
+
+/* Titulo */
+
+section .title{
+    padding-top: 15vh;
+    text-align: center;
+}
+
+section .title h1{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/* Section produtos */
+
+.content{
+    padding: 4rem 0;
+    margin: auto;
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    justify-content: center;
+    padding-left: 1.4rem ;
+}
+
+.content .card{
+    background-color: white;
+    width: 13rem;
+    height: 17rem;  
+    display: flex;
+    flex-direction: column;
+}
+
+.content .card:hover{
+    border: 1px solid black;
+    box-shadow: 1px 1px 8px black;
+}
+
+.content .card .img-wrapper{
+    align-self: center;
+    width: 100%;
+    height: 80%;
+}
+
+.content .card .img-wrapper img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.content .card .img-wrapper{
+    transition: transform .2s ease-in;
+}
+
+.content .card:hover .img-wrapper{
+    transform: scale(.9);
+}
+
+.content .card .texts h1{
+    transition: all .3s;
+}
+
+.content .card:hover .texts h1{
+    margin-left: .6rem;
+}
+
+.content .card .texts .text-paragraph{
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content .card .texts .text-paragraph i{
+    background-color: black;
+    padding: .3rem;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.content .card .texts .text-paragraph p{
+    background-color: white;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.content .card:hover .texts .text-paragraph p{
+    margin-left: .6rem;
+}
+
+
+
