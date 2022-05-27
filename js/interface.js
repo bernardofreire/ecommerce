@@ -1,4 +1,26 @@
+// Funções para abrir e fechar o sidebar
 
+const openBag = () => {
+    document.querySelector('aside').className = 'active'
+}
+
+const closeBag = () => {
+    document.querySelector('aside').className = ''
+}
+
+
+
+document.getElementById('bagIcon').onclick = e => {
+    e.preventDefault()
+    openBag()
+}
+
+document.getElementById('close').onclick = e => {
+    closeBag()
+}
+
+
+// Função para carregar os produtos na web
 
 function renderProduct(){
     products.forEach((product) => {
