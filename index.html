@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,16 +11,33 @@
 
     <link rel="stylesheet" href="./Css/style.css">
 </head>
+
 <body>
 
     <header>
         <div class="logo">
             Ecommerce
         </div>
-        <div id="bag">
-            <i id="bagIcon" class="fa-solid fa-bag-shopping"></i>
-        </div>
+        <nav class="right">
+            <i id="bagIcon" class="fa-solid fa-bag-shopping add-car"></i>
+
+        </nav>
+
     </header>
+
+    <aside>
+        <button class="close" id="close">&times;</button>
+        <h1>Your Cart</h1>
+        <div class="content-cart">
+            
+
+
+        </div>
+    
+        <div class="total">
+            Subtotal: $0
+        </div>
+    </aside>
 
     <section>
         <div class="title">
@@ -28,114 +46,34 @@
     </section>
 
     <section class="content">
-        <div class="card">
-            <div class="img-wrapper">
-                <img src="./img/img/product1.jpg" alt="">
-            </div>
-            <div class="texts">
-                <h1>Camiseta</h1>
-                <div class="text-paragraph">
-                    <p>R$150</p>
-                    <i class="fa-solid fa-bag-shopping"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="img-wrapper">
-                <img src="./img/img/product2.jpg" alt="">
-            </div>
-            <div class="texts">
-                <h1>Fone Wireless</h1>
-                <div class="text-paragraph">
-                    <p>R$300</p>
-                    <i class="fa-solid fa-bag-shopping"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="img-wrapper">
-                <img src="./img/img/product3.jpg" alt="">
-            </div>
-            <div class="texts">
-                <h1>Hooded Parka</h1>
-                <div class="text-paragraph">
-                    <p>R$180</p>
-                    <i class="fa-solid fa-bag-shopping"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="img-wrapper">
-                <img src="./img/img/product4.jpg" alt="">
-            </div>
-            <div class="texts">
-                <h1>Straw Metal Bottle</h1>
-                <div class="text-paragraph">
-                    <p>R$145</p>
-                    <i class="fa-solid fa-bag-shopping"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="img-wrapper">
-                <img src="./img/img/product5.jpg" alt="">
-            </div>
-            <div class="texts">
-                <h1>Óculos de Metal</h1>
-                <div class="text-paragraph">
-                    <p>R$150</p>
-                    <i class="fa-solid fa-bag-shopping"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="img-wrapper">
-                <img src="./img/img/product6.jpg" alt="">
-            </div>
-            <div class="texts">
-                <h1>Boné</h1>
-                <div class="text-paragraph">
-                    <p>R$199</p>
-                    <i class="fa-solid fa-bag-shopping"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="img-wrapper">
-                <img src="./img/img/product7.jpg" alt="">
-            </div>
-            <div class="texts">
-                <h1>Mochila</h1>
-                <div class="text-paragraph">
-                    <p>R$270</p>
-                    <i class="fa-solid fa-bag-shopping"></i>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="img-wrapper">
-                <img src="./img/img/product8.jpg" alt="">
-            </div>
-            <div class="texts">
-                <h1>Ultraboost</h1>
-                <div class="text-paragraph">
-                    <p>R$350</p>
-                    <i class="fa-solid fa-bag-shopping"></i>
-                </div>
-            </div>
-        </div>
-
-        
-        
 
     </section>
-    
+
+
+    <script>
+        const openBag = () => {
+            document.querySelector('aside').className = 'active'
+        }
+
+        const closeBag = () => {
+            document.querySelector('aside').className = ''
+        }
+
+
+
+        document.getElementById('bagIcon').onclick = e => {
+            e.preventDefault()
+            openBag()
+        }
+
+        document.getElementById('close').onclick = e => {
+            closeBag()
+        }
+
+    </script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/interface.js"></script>
 </body>
+
 </html>
