@@ -8,12 +8,12 @@ const closeBag = () => {
     document.querySelector('aside').className = ''
 }
 
-
-
-document.getElementById('bagIcon').onclick = e => {
+document.getElementById('bagIcon').addEventListener('click', ( e ) => {
     e.preventDefault()
     openBag()
-}
+})
+
+
 
 document.getElementById('close').onclick = e => {
     closeBag()
@@ -69,7 +69,9 @@ function addToCart(id){
 }
 
 // Atualizar carrinho
-
+function updateCart(){
+    renderCartItems()
+}
 
 let cartItemsEl = document.querySelector('.content-cart')
 // Renderizar os itens no carrinho
@@ -82,15 +84,25 @@ function renderCartItems(){
                 <img src="${item.imgSrc}" alt="${item.name}">
                 <h3>${item.name}</h3>
                 <p>R$${item.price}</p>
-                <button class="delete-item" id="deleteItem">&times;</button>
+                <button class="delete-item" onclick="removeItemCart(${item.id})">&times;</button>
             </div>
 
       `
     })
 }
 
-function updateCart(){
-    renderCartItems()
+// Remover itens do carrinho
+
+function removeItemCart(id){
+    cart = cart.filter((item)=> item.id !== id)
+
+    updateCart()
 }
+
+
+
+
+
+
 
 
