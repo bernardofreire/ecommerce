@@ -1,13 +1,13 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
-@import url('http://fonts.cdnfonts.com/css/gotham');
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 1.3rem;
-    font-family: 'Gotham', sans-serif;  
+    font-family: 'Poppins', sans-serif;  
 }
 
 header{
@@ -185,13 +185,13 @@ section .title h1{
 }
 
 .content .card .texts .text-paragraph p{
-    background-color: white;
     border-radius: 5px;
     transition: all .3s;
 }
 
 .content .card:hover .texts .text-paragraph p{
     margin-left: .6rem;
+
 }
 
 
