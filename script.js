@@ -1,5 +1,3 @@
-
-
 const products = [
 {
     id:0,
@@ -63,7 +61,9 @@ const closeBag = () => {
     document.querySelector('aside').className = ''
 }
 
-document.getElementById('bagIcon').addEventListener('click', ( e ) => {
+let bagIcon = document.getElementById('bagIcon')
+
+bagIcon.addEventListener('click', ( e ) => {
     e.preventDefault()
     openBag()
 })
